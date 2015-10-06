@@ -18,14 +18,21 @@ Located in [DevAssets.zip](./DevAssets.zip)
 - Cordova settings
 - sumbit to app store?
 - Cordova settings
+
 ## Location
 - Typeahead location search
 - Google Query
 - Detect location
-##Model
+
+## Model
 - Record of where/when
 - seed data
+
 ## UI Views
 - List Views
 - Map Views
 - Transitions
+
+## Admin
+- Create an event
+- Cancel events
