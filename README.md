@@ -13,3 +13,19 @@ This is a Meteor project, so [install that](https://www.meteor.com/install) firs
 # Mockups 
 
 Located in [DevAssets.zip](./DevAssets.zip)
+
+# TODO
+- Cordova settings
+- sumbit to app store?
+- Cordova settings
+## Location
+- Typeahead location search
+- Google Query
+- Detect location
+##Model
+- Record of where/when
+- seed data
+## UI Views
+- List Views
+- Map Views
+- Transitions
