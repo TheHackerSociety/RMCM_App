@@ -9,3 +9,7 @@ This is a Meteor project, so [install that](https://www.meteor.com/install) firs
 1. Create a simple index page for viewing the RMCM Unit's schedule, including locations & times.
   - Automatically delete events that have already occurred.
 2. Provide an admin backend through which RMCM staff can schedule and cancel events.
+
+# Mockups 
+
+Located in [DevAssets.zip](./DevAssets.zip)
