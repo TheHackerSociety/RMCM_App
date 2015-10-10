@@ -9,36 +9,7 @@ App = React.createClass({
     </div>);
   }
 });
-
-Styles = {
-  helloworld: { 
-    'fontSize': "50px",
-    'color': 'blue'
-  }
-};
-
-Styleable = function( component ){
-  component.prototype.styles = function( name, defaults ){
-    var styles = [];
-
-    if( defaults ){
-      styles.push( defaults );
-    }else if( this.styles ){
-      styles.push( this.defaultStyles ); 
-    }
-
-    if( name ){
-      styles.push( Styles[ name ] );
-    }if( this.name ){
-      styles.push( Styles[ this.name ] );
-    }
-
-    return  styles;
-  }
-
-  return Radium( component );
-}
-
+console.log( "using event summary" );
 HelloWorld = Styleable(React.createClass({
   name: "helloworld",
   mixin: [ReactMeteorData],
@@ -49,7 +20,6 @@ HelloWorld = Styleable(React.createClass({
   },
 
   render(){
-    console.log( this );
     return (<h2 style={this.styles()}>Hello world</h2>);
   }
 }));
@@ -58,6 +28,7 @@ Meteor.startup(function() {
   React.render((
     <Router history={browserHistory}>
       <Route path="/helloWorld" component={HelloWorld}/>
+      <Route path="/events/" component={EventsSummary}/>
     </Router>
   ),document.getElementsByTagName('body')[0]);
 });
