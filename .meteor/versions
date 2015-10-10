@@ -11,7 +11,10 @@ boilerplate-generator@1.0.4
 caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
+ccan:cssreset@1.0.0
 check@1.0.6
+coffeescript@1.0.10
+cosmos:browserify@0.5.0
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.1
@@ -31,6 +34,7 @@ http@1.1.1
 id-map@1.0.4
 insecure@1.0.4
 jquery@1.11.4
+jsx@0.2.1
 launch-screen@1.0.4
 livedata@1.0.15
 logging@1.0.8
@@ -47,8 +51,14 @@ observe-sequence@1.0.7
 ordered-dict@1.0.4
 promise@0.5.0
 random@1.0.4
+react@0.1.13
+react-meteor-data@0.1.9
+react-runtime@0.13.3_7
+react-runtime-dev@0.13.3_7
+react-runtime-prod@0.13.3_6
 reactive-dict@1.1.2
 reactive-var@1.0.6
+reactrouter:react-router@0.1.8
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
