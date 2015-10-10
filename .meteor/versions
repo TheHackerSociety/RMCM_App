@@ -38,6 +38,7 @@ jsx@0.2.1
 launch-screen@1.0.4
 livedata@1.0.15
 logging@1.0.8
+markoshust:radium@0.0.3
 meteor@1.1.9
 meteor-base@1.0.1
 minifiers@1.1.7
