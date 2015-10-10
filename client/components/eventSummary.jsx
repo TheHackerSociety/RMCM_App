@@ -1,9 +1,17 @@
 EventsSummary = Styleable(React.createClass({
   name: "event-summary",
+  mixins: [ReactMeteorData],
+  
+  getMeteorData: function(){
+    // fetch your metoer data here for reactivity
+    return {
+      events: Events.findOne()
+    };
+  },
 
-  /*propTypes: {
-    event: React.PropTypes.object.isRequired
-  },*/
+  // propTypes: {
+  //   event: React.PropTypes.object.isRequired
+  // },
 
   defaultStyles: {
     backgroundColor: "#b9d5fd",
@@ -33,6 +41,7 @@ EventsSummary = Styleable(React.createClass({
   },
 
   render(){
+    console.log(this);
     return (<div style={this.styles()}>
       <div style={this.styles('title')}>
         <h3 style={this.styles('dayMonth')}>fri<br/>oct</h3>
