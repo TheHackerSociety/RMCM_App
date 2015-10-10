@@ -28,3 +28,7 @@ Styleable = function( component ){
 
   return Radium( component );
 }
+
+MeteorData = function( component ){
+  
+}

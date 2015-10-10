@@ -9,18 +9,19 @@ App = React.createClass({
     </div>);
   }
 });
-console.log( "using event summary" );
+
+console.log( ReactMeteorData );
+
 HelloWorld = Styleable(React.createClass({
   name: "helloworld",
-  mixin: [ReactMeteorData],
   
   getMeteorData: function(){
     // fetch your metoer data here for reactivity
-    return {};
+    return {here: 'test'};
   },
 
   render(){
-    return (<h2 style={this.styles()}>Hello world</h2>);
+    return (<h2 style={this.styles()}>{this.data.here}</h2>);
   }
 }));
 
@@ -28,7 +29,7 @@ Meteor.startup(function() {
   React.render((
     <Router history={browserHistory}>
       <Route path="/helloWorld" component={HelloWorld}/>
-      <Route path="/events/" component={EventsSummary}/>
+      <Route path="/events" component={EventsSummary}/>
     </Router>
   ),document.getElementsByTagName('body')[0]);
 });
