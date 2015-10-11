@@ -7,7 +7,8 @@ EventsDetails = Styleable(React.createClass({
     let id = this.props.params._id;
 
     return {
-      event: Events.findOne({_id: id})
+      event: Events.findOne({_id: id}),
+      geolocation: Session.get('geolocation')
     };
   },
 
@@ -27,16 +28,17 @@ EventsDetails = Styleable(React.createClass({
   },
 
   render(){
+    let geolocation = this.data.geolocation;
     let event = this.data.event;
     if( !event ){ return (<div></div>); }
 
     return (<div>
       <Link to='/events'><div style={this.styles('back')}>&#10092; Back</div></Link>
-      <EventsSummary event={event}/>
+      <EventsSummary event={event} geolocation={geolocation}/>
       <div style={this.styles('generalInfo')}>
         <p>
           Ronald McDonald Care Mobile <strong>FREE</strong> capabilities and pediatric
-          primary care services provided will vary by each community's needs and may
+          primary care services provided will vary by each community&apos;s needs and may
           include:
         </p>
         <ul style={this.styles('services')}>
