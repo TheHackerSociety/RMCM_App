@@ -17,6 +17,10 @@ Styleable = function( component ){
         styles.push( Styles[ this.name ] );
         styles.push( this.defaultStyles['component'] );
       }
+    }else{
+      if( this.defaultStyles ){
+        styles.push( this.defaultStyles[name] );
+      }
     }
 
     return  styles;

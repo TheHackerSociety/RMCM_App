@@ -2,9 +2,14 @@ EventsIndex = Styleable(React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData: function(){
+    let events = Events.find().fetch().map(function(e){
+      e.url = '/events/' + e._id;
+      e.distance = '2.25';
+      return e;
+    });
     // fetch your metoer data here for reactivity
     return {
-      events: Events.find().fetch()
+      events: events
     };
   },
 

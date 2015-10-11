@@ -1,3 +1,5 @@
+const {Link} = ReactRouter;
+
 EventsSummary = Styleable(React.createClass({
   name: "eventSummary",
 
@@ -62,12 +64,12 @@ EventsSummary = Styleable(React.createClass({
     let day = date.format('ddd');
     let month = date.format('MMM');
     let dateOfMonth = date.format('DD');
-    return (<div style={this.styles()}>
+    let component = (<div style={this.styles()}>
       <div style={this.styles('title')}>
         <h3 style={this.styles('dayMonth')}>{day}<br/>{month}</h3>
         <h2 style={this.styles('date')}>{dateOfMonth}</h2>
         <div style={this.styles('space')}></div>
-        <h2 style={this.styles('distance')}>2.14</h2>
+        <h2 style={this.styles('distance')}>{event.distance}</h2>
         <h3 style={this.styles('distanceText')}>Miles<br/>Away</h3>
       </div>
       <div style={this.styles('body')}>
@@ -79,5 +81,14 @@ EventsSummary = Styleable(React.createClass({
         <p style={this.styles('hours')}>{event.hours}</p>
       </div>
     </div>);
+
+    // XXX Bug in Radium means removing link is difficult
+    //if( event.url ){
+      //let Link = Radium( Link );
+      if( !event.url ){ event.url = '/events/' + event._id; }
+      return (<Link to={event.url}>{component}</Link>)
+    //}else{
+    //  return ({component});
+    //}
   }
 }));
