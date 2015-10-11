@@ -32,6 +32,7 @@ EventsDetails = Styleable(React.createClass({
 
     return (<div>
       <Link to='/events'><div style={this.styles('back')}>&#10092; Back</div></Link>
+      <EventsMap event={event}/>
       <EventsSummary event={event}/>
       <div style={this.styles('generalInfo')}>
         <p>

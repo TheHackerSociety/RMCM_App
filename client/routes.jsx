@@ -15,6 +15,7 @@ Meteor.startup(function() {
     <Router history={browserHistory}>
       <Route path="/events" component={EventsIndex}/>
       <Route path="/events/:_id" component={EventsDetails}/>
+      <Route path="/map" component={EventsMap}/>
     </Router>
   ),document.getElementsByTagName('body')[0]);
 });
