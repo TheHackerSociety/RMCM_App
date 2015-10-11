@@ -4,21 +4,19 @@ EventsIndex = Styleable(React.createClass({
   getMeteorData: function(){
     let events = Events.find().fetch().map(function(e){
       e.url = '/events/' + e._id;
-      e.distance = DistanceFrom( e.geocode );
+      e.distance = DistanceCalc.distance( e.geocode );
       return e;
     });
 
     // fetch your metoer data here for reactivity
     return {
-      events: events,
-      loc: Geolocation.latLng()
+      events: events
     };
   },
 
   render(){
-    let geolocation = this.data.loc;
     let events = _.map(this.data.events, function(e){
-      return <EventsSummary event={e} key={e._id} geolocation={geolocation} />;
+      return <EventsSummary event={e} key={e._id}/>;
     });
     return (<div>
       {events}

@@ -61,7 +61,6 @@ EventsSummary = Styleable(React.createClass({
 
   render(){
     let event = this.props.event;
-    let geolocation = this.props.geolocation;
 
     // Should this be passed in via context or props?
     let date = moment.utc( event.date ).tz( Meteor.settings.public.timezone );

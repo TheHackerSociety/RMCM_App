@@ -8,7 +8,7 @@ EventsDetails = Styleable(React.createClass({
 
     let event = Events.findOne({_id: id});
     if( event ){
-      event.distance = DistanceFrom( event.geocode );
+      event.distance = DistanceCalc.distance( event.geocode );
     }
 
 
