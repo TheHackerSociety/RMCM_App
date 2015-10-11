@@ -22,6 +22,7 @@ Meteor.startup(function() {
       <Route path="/" component={App}/>
         <Route path="/events" component={EventsIndex} key='events'/>
         <Route path="/events/:_id" component={EventsDetails} key='event'/>
+        <Route path="/map" component={EventsMap}/>
       <Route/>
     </Router>
   ),document.getElementsByTagName('body')[0]);

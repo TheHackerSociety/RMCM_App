@@ -1,6 +1,7 @@
 {
   "public":{
     "defaultLocation": "Houston, TX",
-    "timezone": "America/Chicago"
+    "timezone": "America/Chicago",
+    "API_KEY": "AIzaSyDkoZVfa6LWjgGjuOFaNArDgcBRtvOillY"
   }
 }

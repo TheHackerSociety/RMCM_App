@@ -8,7 +8,7 @@ EventsDetails = Styleable(React.createClass({
 
     let event = Events.findOne({_id: id});
     if( event ){
-      event.distance = DistanceFrom( event.geocode );
+      event.distance = DistanceCalc.distance( event.geocode );
     }
 
 
@@ -38,6 +38,7 @@ EventsDetails = Styleable(React.createClass({
 
     return (<div>
       <Link to='/events'><div style={this.styles('back')}>&#10092; Back</div></Link>
+      <EventsMap event={event}/>
       <EventsSummary event={event}/>
       <div style={this.styles('generalInfo')}>
         <p>

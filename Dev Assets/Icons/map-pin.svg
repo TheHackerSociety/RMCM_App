@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="41px" viewBox="0 0 28 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>map-pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Detail-1" sketch:type="MSArtboardGroup" transform="translate(-146.000000, -153.000000)">
+            <g id="map-pin" sketch:type="MSLayerGroup" transform="translate(146.000000, 153.000000)">
+                <path d="M13.7188004,0 C6.14163256,0 0,5.67759195 0,12.6799892 C0,24.7863356 13.7188004,40.5759654 13.7188004,40.5759654 C13.7188004,40.5759654 27.4376008,24.7863356 27.4376008,12.6799892 C27.4376008,5.67759195 21.2954195,0 13.7188004,0 L13.7188004,0 Z" id="Imported-Layers-3" fill="#5790CD" sketch:type="MSShapeGroup"></path>
+                <path d="M13.7188004,18.2591844 C10.8042393,18.2591844 8.44233871,15.9884332 8.44233871,13.1871887 C8.44233871,10.3859443 10.8042393,8.11519307 13.7188004,8.11519307 C16.6329707,8.11519307 18.9952621,10.3859443 18.9952621,13.1871887 C18.9952621,15.9884332 16.6329707,18.2591844 13.7188004,18.2591844 L13.7188004,18.2591844 Z" id="Path" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
