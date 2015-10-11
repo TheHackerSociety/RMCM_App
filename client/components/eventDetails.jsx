@@ -8,7 +8,7 @@ EventsDetails = Styleable(React.createClass({
 
     return {
       event: Events.findOne({_id: id}),
-      geolocation: Session.get('geolocation')
+      geolocation: Geolocation.latLng()
     };
   },
 
