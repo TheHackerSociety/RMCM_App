@@ -13,6 +13,6 @@ DistanceFrom = function( loc ){
       });
     let distance = meters * 0.000621371;
     distance = distance.toFixed(2);
-    return distance;
+    return Number(distance);
   }
 }
