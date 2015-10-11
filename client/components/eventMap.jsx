@@ -30,7 +30,7 @@ EventsMap = Styleable(React.createClass({
     return (
       <div>
         <a href={href}>
-          <img style={this.styles()} src={`https://maps.googleapis.com/maps/api/staticmap?center=${formattedAddress}&zoom=13&size=600x300&scale=2&maptype=roadmap&markers=color:blue%7C${formattedAddress}&key=${key}`}/>
+          <img style={this.styles()} src={`https://maps.googleapis.com/maps/api/staticmap?center=${formattedAddress}&zoom=13&size=600x300&scale=2&maptype=roadmap&markers=size:mid%7Ccolor:blue%7C${formattedAddress}&key=${key}`}/>
           <div style={this.styles('directions')}>Get Directions</div>
         </a>
       </div>);

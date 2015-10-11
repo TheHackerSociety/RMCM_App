@@ -6,9 +6,11 @@ EventsDetails = Styleable(React.createClass({
   getMeteorData: function(){
     let id = this.props.params._id;
 
+    let event = Events.findOne({_id: id});
+    event.distance = DistanceFrom( event.geocode );
+
     return {
-      event: Events.findOne({_id: id}),
-      geolocation: Geolocation.latLng()
+      event: event,
     };
   },
 
@@ -28,14 +30,13 @@ EventsDetails = Styleable(React.createClass({
   },
 
   render(){
-    let geolocation = this.data.geolocation;
     let event = this.data.event;
     if( !event ){ return (<div></div>); }
 
     return (<div>
       <Link to='/events'><div style={this.styles('back')}>&#10092; Back</div></Link>
       <EventsMap event={event}/>
-      <EventsSummary event={event} geolocation={geolocation}/>
+      <EventsSummary event={event}/>
       <div style={this.styles('generalInfo')}>
         <p>
           Ronald McDonald Care Mobile <strong>FREE</strong> capabilities and pediatric
