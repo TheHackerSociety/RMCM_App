@@ -1,8 +1,4 @@
 Styles = {
-  helloworld: { 
-    'fontSize': "50px",
-    'color': 'blue'
-  },
 };
 
 
@@ -15,11 +11,11 @@ Styleable = function( component ){
           styles.push( Styles[ this.name ][ name ] );
         }
         if( this.defaultStyles ){
-          styles.push( this.defaultStyles[name] ); 
+          styles.push( this.defaultStyles[name] );
         }
       }else{
         styles.push( Styles[ this.name ] );
-        styles.push( this.defaultStyles ); 
+        styles.push( this.defaultStyles );
       }
     }
 
@@ -27,8 +23,4 @@ Styleable = function( component ){
   }
 
   return Radium( component );
-}
-
-MeteorData = function( component ){
-  
 }

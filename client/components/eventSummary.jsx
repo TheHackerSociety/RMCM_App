@@ -1,58 +1,78 @@
 EventsSummary = Styleable(React.createClass({
-  name: "event-summary",
-  mixins: [ReactMeteorData],
-  
-  getMeteorData: function(){
-    // fetch your metoer data here for reactivity
-    return {
-      events: Events.findOne()
-    };
+  name: "eventSummary",
+
+  propTypes: {
+    event: React.PropTypes.object.isRequired
   },
 
-  // propTypes: {
-  //   event: React.PropTypes.object.isRequired
-  // },
-
   defaultStyles: {
-    backgroundColor: "#b9d5fd",
     color: "white",
     height: "240px",
+    display: 'flex',
+    flexDirection: 'column',
     title: {
       backgroundColor: "#4b74ae",
+      display: 'flex',
+      alignItems: 'center',
       color: "white",
-      fontSize: '15px'
+      padding: '20px'
     },
     'dayMonth': {
-      fontSize: '12px'
+      fontSize: '12px',
+      paddingRight: '8px'
     },
     'date': {
-      fontSize: '28px'
+      fontSize: '28px',
+    },
+    'space': {
+      flexGrow: 1
     },
     'distance': {
       color: '#ffc829',
-      float: 'right',
-      fontSize: '28px'
+      fontSize: '28px',
+      paddingRight: '8px'
     },
-    'distance-text': {
+    'distanceText': {
       color: '#ffc829',
       fontSize: '12px',
-      float: 'right'
+    },
+    'body': {
+      backgroundColor: '#628ecc',
+      padding: '20px',
+      display: 'flex',
+      flexGrow: 1,
+      flexDirection: 'column',
+    },
+    'location': {
+      fontSize: '18px',
+      flexGrow: 1,
+    },
+    'address': {
+      flexGrow: 1,
     }
   },
 
   render(){
-    console.log(this);
+    let event = this.props.event;
+
+    // Should this be passed in via context or props?
+    let date = moment( event.date ).tz( Meteor.settings.timezone );
+    console.log( date.day() );
     return (<div style={this.styles()}>
       <div style={this.styles('title')}>
         <h3 style={this.styles('dayMonth')}>fri<br/>oct</h3>
-        <h2 style={this.styles('date')}>28</h2> 
-        <h3 style={this.styles('distance-text')}>Miles<br/>Away</h3>
+        <h2 style={this.styles('date')}>28</h2>
+        <div style={this.styles('space')}></div>
         <h2 style={this.styles('distance')}>2.14</h2>
+        <h3 style={this.styles('distanceText')}>Miles<br/>Away</h3>
       </div>
       <div style={this.styles('body')}>
-        <h3>McDonald's</h3>
-        <p>914 Teetshorn St.</p>
-        <p>10:30am - 4:00pm</p>
+        <h3 style={this.styles('location')}>McDonald's</h3>
+        <div style={this.styles('address')}>
+          <p style={this.styles('street')}>914 Teetshorn St.</p>
+          <p style={this.styles('cityStateZip')}>Houston, TX 55555</p>
+        </div>
+        <p style={this.styles('hours')}>10:30am - 4:00pm</p>
       </div>
     </div>);
   }
