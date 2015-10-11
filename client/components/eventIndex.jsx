@@ -10,12 +10,8 @@ EventsIndex = Styleable(React.createClass({
 
     // fetch your metoer data here for reactivity
     return {
-<<<<<<< HEAD
       events: _.sortBy(events,'distance'),
       loc: Geolocation.latLng()
-=======
-      events: events
->>>>>>> aed60b6e0e75f6063737a5a1359698096e94de33
     };
   },
 
