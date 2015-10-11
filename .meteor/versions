@@ -68,7 +68,6 @@ npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
 outatime:geolib@2.0.15
-poetic:assets@0.0.1
 poetic:moment-timezone@0.4.0
 promise@0.5.0
 raix:eventemitter@0.1.3
