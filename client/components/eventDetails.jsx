@@ -7,7 +7,10 @@ EventsDetails = Styleable(React.createClass({
     let id = this.props.params._id;
 
     let event = Events.findOne({_id: id});
-    event.distance = DistanceFrom( event.geocode );
+    if( event ){
+      event.distance = DistanceFrom( event.geocode );
+    }
+
 
     return {
       event: event,

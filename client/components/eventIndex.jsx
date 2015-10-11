@@ -21,7 +21,6 @@ EventsIndex = Styleable(React.createClass({
       return <EventsSummary event={e} key={e._id} geolocation={geolocation} />;
     });
     return (<div>
-      <EventsInput/>
       {events}
     </div>);
   }
