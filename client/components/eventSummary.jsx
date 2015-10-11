@@ -58,32 +58,34 @@ EventsSummary = Styleable(React.createClass({
 
   render(){
     let event = this.props.event;
-
+    let geolocation = this.props.geolocation;
+// console.log(geolocation);
     // Should this be passed in via context or props?
     let date = moment.utc( event.date ).tz( Meteor.settings.public.timezone );
     let day = date.format('ddd');
     let month = date.format('MMM');
     let dateOfMonth = date.format('DD');
-    // let distance = '';
-    // let geolocation = Geolocation.latLng();
-    // let meters = geolib.getDistance(
-    //     {
-    //       latitude: geolocation.lat,
-    //       longitude: geolocation.lng
-    //     }, 
-    //     {
-    //       latitude: event.latitude,
-    //       longitude: event.longitude
-    //   });
-    //   distance = meters * 0.000621371;
-    //   distance = distance.toFixed(2);
-    //   console.log(distance);
+    let distance = event.distance;
+    if(geolocation){
+      let meters = geolib.getDistance(
+          {
+            latitude: geolocation.lat,
+            longitude: geolocation.lng
+          }, 
+          {
+            latitude: event.latitude,
+            longitude: event.longitude
+        });
+      distance = meters * 0.000621371;
+      distance = distance.toFixed(2);
+      // console.log(distance);
+    }
     let component = (<div style={this.styles()}>
       <div style={this.styles('title')}>
         <h3 style={this.styles('dayMonth')}>{day}<br/>{month}</h3>
         <h2 style={this.styles('date')}>{dateOfMonth}</h2>
         <div style={this.styles('space')}></div>
-        <h2 style={this.styles('distance')}>{event.distance}</h2>
+        <h2 style={this.styles('distance')}>{distance}</h2>
         <h3 style={this.styles('distanceText')}>Miles<br/>Away</h3>
       </div>
       <div style={this.styles('body')}>

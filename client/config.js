@@ -1,11 +1,15 @@
 Meteor.startup(function () {
 	Meteor.subscribe('events');
-	var test = Tracker.autorun(function() {
-		var geolocation = Geolocation.currentLocation();
-		if(geolocation){
-				Session.set('geolocation',geolocation);
-				console.log('geolocation',geolocation);
-				console.log('session',Session.get('geolocation'));
-			}
+	
+	
+	Session.setDefault('geolocation',null);
+
+	Tracker.autorun(function (computation) {
+	  // userGeoLocation.set(Geolocation.latLng());
+	  if (Geolocation.latLng()) {
+	    //stop the tracker if we got something
+	    Session.set('geolocation',Geolocation.latLng());
+	    computation.stop();
+	  }
 	});
 });
