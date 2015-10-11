@@ -24,3 +24,6 @@ markoshust:radium
 
 momentjs:moment
 poetic:moment-timezone
+outatime:geolib
+mdg:geolocation
+aldeed:geocoder
