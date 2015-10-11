@@ -1,5 +1,5 @@
 DistanceFrom = function( loc ){
-  console.log( loc );
+
   let latLng = Geolocation.latLng();
   if(latLng){
     let meters = geolib.getDistance(
