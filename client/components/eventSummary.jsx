@@ -6,10 +6,12 @@ EventsSummary = Styleable(React.createClass({
   },
 
   defaultStyles: {
-    color: "white",
-    height: "240px",
-    display: 'flex',
-    flexDirection: 'column',
+    component: {
+      color: "white",
+      height: "240px",
+      display: 'flex',
+      flexDirection: 'column',
+    },
     title: {
       backgroundColor: "#4b74ae",
       display: 'flex',
@@ -56,23 +58,25 @@ EventsSummary = Styleable(React.createClass({
     let event = this.props.event;
 
     // Should this be passed in via context or props?
-    let date = moment( event.date ).tz( Meteor.settings.timezone );
-    console.log( date.day() );
+    let date = moment.utc( event.date ).tz( Meteor.settings.public.timezone );
+    let day = date.format('ddd');
+    let month = date.format('MMM');
+    let dateOfMonth = date.format('DD');
     return (<div style={this.styles()}>
       <div style={this.styles('title')}>
-        <h3 style={this.styles('dayMonth')}>fri<br/>oct</h3>
-        <h2 style={this.styles('date')}>28</h2>
+        <h3 style={this.styles('dayMonth')}>{day}<br/>{month}</h3>
+        <h2 style={this.styles('date')}>{dateOfMonth}</h2>
         <div style={this.styles('space')}></div>
         <h2 style={this.styles('distance')}>2.14</h2>
         <h3 style={this.styles('distanceText')}>Miles<br/>Away</h3>
       </div>
       <div style={this.styles('body')}>
-        <h3 style={this.styles('location')}>McDonald's</h3>
+        <h3 style={this.styles('location')}>{event.name}</h3>
         <div style={this.styles('address')}>
-          <p style={this.styles('street')}>914 Teetshorn St.</p>
-          <p style={this.styles('cityStateZip')}>Houston, TX 55555</p>
+          <p style={this.styles('street')}>{event.address}</p>
+          <p style={this.styles('cityStateZip')}>{event.city}, {event.state} {event.zip}</p>
         </div>
-        <p style={this.styles('hours')}>10:30am - 4:00pm</p>
+        <p style={this.styles('hours')}>{event.hours}</p>
       </div>
     </div>);
   }

@@ -1,4 +1,6 @@
 {
-  "defaultLocation": "Houston, TX",
-  "timezone": "America/Chicago"
+  "public":{
+    "defaultLocation": "Houston, TX",
+    "timezone": "America/Chicago"
+  }
 }
