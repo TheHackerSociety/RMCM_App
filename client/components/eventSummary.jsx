@@ -1,5 +1,8 @@
 const {Link} = ReactRouter;
 
+// You must specify timezone in settings for this component to work
+Meteor.settings.public.timezone;
+
 EventsSummary = Styleable(React.createClass({
   name: "eventSummary",
 
@@ -64,20 +67,6 @@ EventsSummary = Styleable(React.createClass({
     let day = date.format('ddd');
     let month = date.format('MMM');
     let dateOfMonth = date.format('DD');
-    // let distance = '';
-    // let geolocation = Geolocation.latLng();
-    // let meters = geolib.getDistance(
-    //     {
-    //       latitude: geolocation.lat,
-    //       longitude: geolocation.lng
-    //     }, 
-    //     {
-    //       latitude: event.latitude,
-    //       longitude: event.longitude
-    //   });
-    //   distance = meters * 0.000621371;
-    //   distance = distance.toFixed(2);
-    //   console.log(distance);
     let component = (<div style={this.styles()}>
       <div style={this.styles('title')}>
         <h3 style={this.styles('dayMonth')}>{day}<br/>{month}</h3>

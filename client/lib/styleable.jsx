@@ -1,10 +1,15 @@
 Styles = {
+  base: {
+    fontFamily: "'Open Sans', sans-serif"
+  }
 };
 
 
 Styleable = function( component ){
   component.prototype.styles = function( name ){
     var styles = [];
+    styles.push( Styles.base );
+
     if( this.name ){
       if( name ){
         if( Styles[ this.name ] ){
