@@ -8,7 +8,8 @@ EventsMap = Styleable(React.createClass({
       width: "100%",
     },
     directions: {
-      backgroundColor: 'yellow',
+      'marginTop': '-4px',
+      backgroundColor: '#ffc829',
       color: 'black',
       height: '60px',
       display: 'flex',

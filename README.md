@@ -38,3 +38,9 @@ Located in [DevAssets.zip](./DevAssets.zip)
 ## Admin
 - Create an event
 - Cancel events
+
+## Remaining
+Distance Buckets
+Set Splash Screen
+Type ahead location
+
