@@ -5,7 +5,7 @@
 This will cater specifically to Houston.  The schedule is [here](http://texaschildrens.org/Locate/In-the-Community/Mobile-Clinic-Program/Ronald-McDonald-Care-Mobile-Clinic/).
 
 # Installation
-This is a Meteor project, so [install that](https://www.meteor.com/install) first. Fork and clone the repo, navigate to the project directory, and run `meteor` from the command line. Check out [this article](https://guides.github.com/activities/forking/) for help on forking & contributing to open-source projects.
+This is a Meteor project, so [install that](https://www.meteor.com/install) first. Fork and clone the repo, navigate to the project directory, and run `meteor --settings settings.json` from the command line. Check out [this article](https://guides.github.com/activities/forking/) for help on forking & contributing to open-source projects.
 
 # Goals
 1. Create a simple index page for viewing the RMCM Unit's schedule, including locations & times.
