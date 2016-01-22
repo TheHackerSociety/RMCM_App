@@ -18,8 +18,9 @@ App = React.createClass({
 Meteor.startup(function() {
   React.render((
     <Router history={browserHistory}>
-      <Redirect from="/" to="/events" />
+      <Redirect from="/" to="/index" />
       <Route path="/" component={App}/>
+        <Route path="/index" component={Index} />
         <Route path="/events" component={EventsIndex} key='events'/>
         <Route path="/events/:_id" component={EventsDetails} key='event'/>
         <Route path="/map" component={EventsMap}/>
