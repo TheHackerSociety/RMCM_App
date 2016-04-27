@@ -1,5 +1,8 @@
 # About
 
+# Deprecated, please go to https://github.com/TheHackerSociety/rmhc
+
+
 [Ronald McDonald Care Mobile](http://mchodessa.com/ronald-mcdonald-care-mobile/) a medical clinic on wheels servicing Odessa neighborhoods with unmet pediatric healthcare needs. This app offers a way to discover where and when they can receive treatment from the RMCM unit.
 
 This will cater specifically to Houston.  The schedule is [here](http://texaschildrens.org/Locate/In-the-Community/Mobile-Clinic-Program/Ronald-McDonald-Care-Mobile-Clinic/).
